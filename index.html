@@ -20,8 +20,10 @@
                 </a>
 
 
-                <ul class="show-deskop hide-mobile" id="nav">
-                    <li id="exit" class="exit-btn hide-desktop"><img src="images/exit.svg" alt="exit menu"></li>
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-desktop">
+                        <img src="images/exit.svg" alt="exit menu">
+                    </li>
                     <li><a href="#">home</a></li>
                     <li><a href="#">services</a></li>
                     <li><a href="#">about</a></li>
@@ -105,6 +107,24 @@
             </div>
         </div>
     </footer>
+
+    <script>
+
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function (e) {
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        });
+
+        exit.addEventListener('click', function (e) {
+            nav.classList.add('hide-mobile');
+            e.preventDefault();
+        });
+
+    </script>
 
 </body>
 
